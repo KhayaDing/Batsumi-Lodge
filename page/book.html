@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Personalized Quote - Batsumi Lodge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/book.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">  
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation" role="navigation">
+            <div class="logo" aria-label="Batsumi Lodge logo">Batsumi Lodge</div>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false"> 
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" role="menu">
+                <li><a href="/page/home.html">Home</a></li>
+                <li><a href="/page/rooms.html">Rooms</a></li>
+                <li><a href="/page/amenities.html">Amenities</a></li>
+                <li><a href="/page/gallery.html">Gallery</a></li> 
+                <li><a href="/page/aboutUs.html">About Us</a></li> 
+                <li><a href="/page/contactUs.html">Contact Us</a></li>
+                <li><a href="/page/book.html" aria-current="page" class="book-now">Book Now</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="quote-hero">
+            <div class="quote-content">
+             <h1>Get a Personalized Quote</h1>
+             <p>Tell us about your stay, and we'll prepare a tailored quote for you.</p>
+            </div>
+        </section>
+
+        <section class="quote-container">
+            <form id="quote-form" class="quote-form" action="/submit-request" method="post"> 
+                <div class="form-group">
+                    <label for="check-in">Check-in Date</label>
+                    <input type="date" id="check-in" name="check-in" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-out">Check-out Date</label>
+                    <input type="date" id="check-out" name="check-out" required>
+                </div>
+                <div class="form-group">
+                    <label for="room-type">Room Type</label>
+                    <select id="room-type" name="room-type" required>
+                        <option value="">Select Room Type</option>
+                        <option value="standard">Standard Room</option>
+                        <option value="sharing">Sharing Suite</option>
+                        <option value="family">Family Suite</option>
+                        <option value="presidential">Presidential Suite</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" name="guests" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="catering">Catering Options (Optional)</label>
+                    <select id="catering" name="catering">
+                        <option value="">Select Catering Option</option>
+                        <option value="breakfast">Breakfast Only</option>
+                        <option value="half-board">Half Board</option>
+                        <option value="full-board">Full Board</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-primary">Request Quote</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="contact-info">
+            <div class="info-box">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> bookings@batsumilodge.com</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> 087 310 5230</p> 
+            </div>
+            <div class="info-box">
+                <h3>Important Information</h3>
+                <ul>
+                    <li>All prices are subject to availability.</li>
+                    <li>Reservations require a deposit.</li>
+                    <li>Check-in: From 10:00 AM daily</li>
+                    <li>Check-out: By 09:00 AM daily</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <h3>Our Rooms</h3>
+                <ul class="room-pricing">
+                    <li>Standard Room: <span>R800</span></li>
+                    <li>Sharing Suite: <span>R700</span></li>
+                    <li>Family Suite: <span>R1200</span></li>
+                    <li>Presidential Suite: <span>R3500</span> (All Inclusive)</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 15 Phakedi, Galeshewe</p> 
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> bookings@batsumilodge.com</p> 
+                <p><i class="fas fa-phone" aria-hidden="true"></i> 087 310 5230</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/page/home.html"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+                    <li><a href="/page/rooms.html"><i class="fas fa-bed" aria-hidden="true"></i> Rooms</a></li> 
+                    <li><a href="/page/amenities.html"><i class="fas fa-swimming-pool" aria-hidden="true"></i> Amenities</a></li>
+                    <li><a href="/page/gallery.html"><i class="fas fa-images" aria-hidden="true"></i> Gallery</a></li> 
+                    <li><a href="/page/aboutUs.html"><i class="fas fa-info-circle" aria-hidden="true"></i> About Us</a></li>
+                    <li><a href="/page/contactUs.html"><i class="fas fa-phone" aria-hidden="true"></i> Contact Us</a></li> 
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/BatsumiLuxuryGuesthouse/" aria-label="Follow us on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a> 
+                    <a href="https://www.instagram.com/batsumi_luxury_guesthouse/" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a> 
+                    <a href="https://twitter.com/your_twitter_handle" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a> 
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Batsumi Lodge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/scripts/book.js"></script> 
+
+</body>
+</html>

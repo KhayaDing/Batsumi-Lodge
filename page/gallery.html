@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the luxurious spaces and experiences at Batsumi Lodge, Galeshewe, through our vibrant image gallery showcasing our rooms, amenities, surroundings and more.">
+    <meta name="keywords" content="Batsumi Lodge, Galeshewe, luxury guesthouse, image gallery, accommodations, amenities, surroundings, dining, events">
+    <link rel="stylesheet" href="/styles/gallery.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">  
+    <title>Gallery - Batsumi Lodge</title>
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="logo" aria-label="Batsumi Lodge logo">Batsumi Lodge</div>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false"> 
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" role="menu">
+                <li><a href="/page/home.html">Home</a></li>
+                <li><a href="/page/rooms.html">Rooms</a></li>
+                <li><a href="/page/amenities.html">Amenities</a></li>
+                <li><a href="/page/gallery.html" aria-current="page">Gallery</a></li> 
+                <li><a href="/page/aboutUs.html">About Us</a></li> 
+                <li><a href="/page/contactUs.html">Contact Us</a></li>
+                <li><a href="/page/book.html" class="book-now">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb');">
+            <div class="hero-content">
+                <h1>Our Gallery</h1>
+                <p>Experience the beauty of Batsumi Lodge</p>
+            </div>
+        </section>
+
+        <section class="gallery" aria-label="Image gallery">
+            <div class="gallery-categories" role="tablist" aria-label="Gallery categories">
+                <button class="gallery-category active" role="tab" aria-selected="true" aria-controls="gallery-grid" id="all-tab" data-category="all">All</button>
+                <button class="gallery-category" role="tab" aria-selected="false" aria-controls="gallery-grid" id="rooms-tab" data-category="rooms">Rooms</button>
+                <button class="gallery-category" role="tab" aria-selected="false" aria-controls="gallery-grid" id="amenities-tab" data-category="amenities">Amenities</button>
+                <button class="gallery-category" role="tab" aria-selected="false" aria-controls="gallery-grid" id="surroundings-tab" data-category="surroundings">Surroundings</button>
+                <button class="gallery-category" role="tab" aria-selected="false" aria-controls="gallery-grid" id="dining-tab" data-category="dining">Dining</button>
+                <button class="gallery-category" role="tab" aria-selected="false" aria-controls="gallery-grid" id="events-tab" data-category="events">Events</button>
+            </div>
+            <div class="gallery-grid" id="gallery-grid" aria-live="polite">
+                <div class="gallery-item" data-category="rooms">
+                    <img src="/images/presidential-suite.jpg" alt="Presidential Suite">
+                    <div class="gallery-caption">Presidential Suite</div>
+                </div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="/images/Family-suite.jpg" alt="Family Suite">
+                    <div class="gallery-caption">Family Suite</div>
+                </div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="/images/Standard-Suite.jpg" alt="Standard Suite">
+                    <div class="gallery-caption">Standard Suite</div>
+                </div>
+                <div class="gallery-item" data-category="amenities">
+                    <img src="/images/swimmingPool.jpg" alt="Swimming Pool">
+                    <div class="gallery-caption">Refreshing Pool</div>
+                </div>
+                <div class="gallery-item" data-category="amenities">
+                    <img src="/images/bar-lounge.jpg" alt="Bar and Lounge">
+                    <div class="gallery-caption">Bar & Cocktail Lounge</div>
+                </div>
+                <div class="gallery-item" data-category="amenities">
+                    <img src="/images/hero-image.jpg" alt="Reception Area">
+                    <div class="gallery-caption">Spacious Reception Area</div>
+                </div>
+                <div class="gallery-item" data-category="surroundings">
+                    <img src="/images/Galeshewe-Sunset.jpg" alt="Galeshewe Sunset">
+                    <div class="gallery-caption">Beautiful Galeshewe Sunset</div>
+                </div>
+                <div class="gallery-item" data-category="surroundings">
+                    <img src="/images/nearby-attractions.jpg" alt="Local Attraction">
+                    <div class="gallery-caption">Nearby Attractions</div>
+                </div>
+                <div class="gallery-item" data-category="amenities">
+                    <img src="/images/braai-area.jpg" alt="Braai Area">
+                    <div class="gallery-caption">Private Braai Area</div>
+                </div>
+                 <div class="gallery-item" data-category="dining">
+                    <img src="/images/food1.jpg" alt="Food">
+                    <div class="gallery-caption">Dining</div>
+                </div>
+                <div class="gallery-item" data-category="dining">
+                    <img src="/images/food2.jpg" alt="Food">
+                    <div class="gallery-caption">Dining</div>
+                </div>
+                 <div class="gallery-item" data-category="events">
+                    <img src="/images/event-setup.jpg" alt="Food">
+                    <div class="gallery-caption">Event Setup </div>
+                </div>
+                 <div class="gallery-item" data-category="events">
+                    <img src="/images/pool-deck-event.jpg" alt="Food">
+                    <div class="gallery-caption">Pool Deck Event  </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 15 Phakedi, Galeshewe</p>
+                <p><i class="fas fa-envelope"></i> bookings@batsumilodge.com</p>
+                <p><i class="fas fa-phone"></i> 087 310 5230</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/page/home.html"><i class="fas fa-home"></i> Home</a></li> 
+                    <li><a href="/page/rooms.html"><i class="fas fa-bed"></i> Rooms</a></li> 
+                    <li><a href="/page/amenities.html"><i class="fas fa-swimming-pool"></i> Amenities</a></li> 
+                    <li><a href="/page/gallery.html"><i class="fas fa-images"></i> Gallery</a></li> 
+                    <li><a href="/page/aboutUs.html"><i class="fas fa-info-circle"></i> About Us</a></li> 
+                    <li><a href="/page/contactUs.html"><i class="fas fa-phone"></i> Contact Us</a></li> 
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/BatsumiLuxuryGuesthouse/" aria-label="Follow us on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a> 
+                    <a href="https://www.instagram.com/batsumi_luxury_guesthouse/" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/your_twitter_handle" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Batsumi Lodge. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/scripts/gallery.js"></script> 
+</body>
+</html>

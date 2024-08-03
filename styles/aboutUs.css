@@ -1,0 +1,471 @@
+/* CSS styles for the rooms page */
+:root {
+    --primary-color: #8B4513;
+    --secondary-color: #6B3A0C;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Header styles (same as homepage) */
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.book-now, .book-room {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.book-now:hover, .book-room:hover {
+    background-color: var(--secondary-color);
+}
+
+/* About hero section styles */
+.about-hero {
+    height: 60vh;
+    background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.contact-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contact-hero h1 {
+    font-size: 48px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Redesigned About and Mission sections */
+.about-section, .mission-section {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.about-content, .mission-content {
+    background-color: var(--white);
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-content::before, .mission-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.about-section h2, .mission-section h2 {
+    color: var(--primary-color);
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: left;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.about-section h2::after, .mission-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+.about-section p, .mission-section p {
+    margin-bottom: 25px;
+    line-height: 1.8;
+    color: #555;
+    font-size: 16px;
+}
+
+.mission-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.mission-content li {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 30px;
+    color: #555;
+}
+
+.mission-content li::before {
+    content: "\2022";
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.section-image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-section .section-image {
+    top: -50px;
+    right: -50px;
+}
+
+.mission-section .section-image {
+    bottom: -50px;
+    left: -50px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-content, .mission-content {
+        padding: 40px;
+    }
+
+    .about-section h2, .mission-section h2 {
+        font-size: 28px;
+    }
+
+    .section-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-section .section-image,
+    .mission-section .section-image {
+        display: none;
+    }
+}
+
+/* Team section styles */
+.team-section {
+    background-color: #f5f5f5;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.team-section h2 {
+    color: var(--primary-color);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.team-section > p {
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin: 20px 0 10px;
+}
+
+.team-member p {
+    color: var(--text-color);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 36px;
+    }
+
+    .about-hero p {
+        font-size: 18px;
+    }
+
+    .about-section h2, .mission-section h2, .team-section h2 {
+        font-size: 28px;
+    }
+
+    .about-content, .mission-content {
+        padding: 30px;
+    }
+
+    .team-grid {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-hero h1 {
+        font-size: 28px;
+    }
+    
+    .about-hero p {
+        font-size: 16px;
+    }
+    
+    .about-section h2, .mission-section h2, .team-section h2 {
+        font-size: 24px;
+    }
+
+    .about-content, .mission-content {
+        padding: 20px;
+    }
+
+    .team-member h3 {
+        font-size: 20px;
+    }
+}
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: var(--white);
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-section p i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    margin-right: 15px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+}
+
+.social-links a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a:hover::before {
+    transform: scale(1);
+}
+
+.social-links a:focus {
+    outline: 2px solid var(--white);
+    outline-offset: 2px;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        margin-bottom: 30px;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .footer-section p {
+        justify-content: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
